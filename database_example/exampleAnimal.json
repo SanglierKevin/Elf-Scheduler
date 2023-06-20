@@ -1,0 +1,20 @@
+{
+    "name" : "test",
+    "description" : "Paresse",
+    "picture" : "/uploads/jungle.jpg"
+}
+{
+    "name" : "Lion",
+    "description" : "Colère",
+    "picture" : ""
+}
+{
+    "name" : "Tortue",
+    "description" : "Envie",
+    "picture" : ""
+}
+{
+    "name" : "Lapin",
+    "description" : "Luxure",
+    "picture" : ""
+}

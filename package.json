@@ -1,0 +1,46 @@
+{
+  "name": "linfo1212_f",
+  "version": "1.0.0",
+  "description": "projet final du cours de projet d'approfondissement en sciences informatiques",
+  "main": "app.js",
+  "jest": {
+    "verbose": true,
+    "globalTeardown": "./Tests/teardown.js"
+  },
+  "scripts": {
+    "prestart": "mongod --dbpath database&",
+    "start": "node app.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aperence/LINFO1212_F.git"
+  },
+  "author": "Kevin Sanglier, Arthur Fraipont, Anthony Doeraene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aperence/LINFO1212_F/issues"
+  },
+  "homepage": "https://github.com/Aperence/LINFO1212_F#readme",
+  "private": true,
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "chromedriver": "^95.0.0",
+    "consolidate": "^0.16.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "fs": "^0.0.1-security",
+    "hogan": "^1.0.2",
+    "https": "^1.0.0",
+    "mongodb": "^4.1.4",
+    "multer": "^1.4.3",
+    "path": "^0.12.7",
+    "pirates": "^4.0.3",
+    "selenium": "^2.20.0",
+    "selenium-webdriver": "^4.1.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.3"
+  }
+}

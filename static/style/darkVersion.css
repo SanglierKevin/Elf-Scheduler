@@ -1,0 +1,124 @@
+/** Fichier css pour le style sombre des pages */
+
+
+/** Couleurs du sites */
+:root {
+  --translucid: rgb(0, 0, 0, 0.8);
+  --border: rgb(70, 180, 180);
+  --background: rgb(30, 30, 50);
+  --input: rgb(70, 70, 90);
+  --inputhover: rgb(60, 60, 60);
+}
+
+/** Cadre principal de la page (translucide) */
+.Maincontent{
+    border: 3px solid var(--border);
+    background-color: var(--translucid);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/** Grands cadres arrondis */
+.BoxBorder{
+    border: 3px solid var(--border);
+    background-color: var(--background);
+}
+
+/** Fenêtre qui apparait sur la page d'attribution des heures */
+.popup{
+    border: 5px solid var(--border);
+    background-color: var(--background);
+    color: white;
+}
+
+/** Table contenant l'attribution des heures */
+.tableContent, table, .schedule{
+    border: 3px solid var(--border);
+    background-color: var(--background);
+}
+
+/** Endroits où l'on peut taper du texte */
+textarea{
+    background-color: var(--input);
+    color: white;
+}
+
+/** Endroits à remplir dans les formulaires */
+input{
+    background-color: var(--input);
+    color: white;
+}
+
+/** Selections sur la page d'attribution des heures */
+select{
+    background-color: var(--background);
+    color: white;
+}
+
+/** Changement de couleur quand on passe sur les sélections */
+select:hover{
+    background-color: var(--inputhover);
+}
+
+/** Barres pour sélectionner les heures */
+input[type="range"]{
+    background: var(--input);
+}
+
+/** Changement de couleur quand on passe sur les barres */
+input[type="range"]:hover{
+    background: var(--inputhover);
+}
+
+/** Curseur sur les barres */
+input[type='range']::-webkit-slider-thumb{
+    background-color: var(--border);
+}
+
+/** Cadres de tailles différentes pour la connexion et l'inscription */
+.box, .midbox{
+    background-color: var(--translucid);
+    border: 3px solid var(--border);
+    color: white;
+}
+
+/** Boutons utilisés sous des formulaires */
+.buttonModif{
+    border: 3px solid var(--border);
+    color: white;
+    background-color: var(--input);
+}
+
+/** Changement de couleur quand on passe sur les boutons */
+.buttonModif:hover{
+    color: white;
+    background-color: var(--inputhover);
+}
+
+/** Boutons utilisés sous des formulaires */
+.submitButton{
+    border: 3px solid var(--border);
+    color: white;
+    background-color: var(--input);
+}
+
+/** Changement de couleur quand on passe sur les boutons */
+.submitButton:hover{
+    background-color: var(--inputhover);
+}
+
+a{
+    color : white
+}
+
+a:hover{
+    color : white
+}
+
+.true{
+    background-color: rgb(82, 194, 162);
+}
+
+.true:hover{
+    background-color: rgb(40, 143, 114);
+}

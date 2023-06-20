@@ -1,0 +1,62 @@
+/**
+*   Fichier css de la page d'affichage des animaux et des employés
+*/
+
+.NameDateBorder{
+    width: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin : 20px 0px;
+    align-items: center;
+}
+
+.BoxBorder{
+    width: 80%;
+}
+
+.dbpicture{
+    width: 80%; 
+    height : 65%;
+    margin: 10px;
+}
+
+/** Modifications des bordures des cellules de la table */
+table, th, td{
+    border : solid 2px black;
+    border-collapse: collapse;
+    text-align: center; 
+    width : 100%;
+}
+
+th{
+    height: 75px;  
+}
+
+td{
+    width: 180px;
+    height : 50px;
+}
+
+select{
+    margin : 15px;
+}
+
+.numlist{
+    margin-top : 15px
+}
+
+.true, .false{
+    display: inline-block;
+    width : 25px;
+    text-align : center;
+}
+.true{
+    border-radius: 3px;
+}
+
+@media (max-width:767px){
+
+    .Maincontent{
+        width: 90%;
+    }
+}

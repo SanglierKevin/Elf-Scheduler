@@ -1,0 +1,97 @@
+/** Fichier css pour les pages de connexion, d'inscription et du profil */
+
+/* code relatif aux inputs (contenant toute la page html sauf la barre de navigation) */
+:root{
+    --min : 300px;
+}
+
+.border{
+    flex-direction: row;
+}
+
+span{
+    float: right;
+    width: 60%;
+}
+
+/* formatage des zones remplissable et de leur intitulé */
+label, input{
+    display: table-cell;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.BoxBorder{
+    width: auto;
+}
+
+/* cadres pour la connexion et l'inscription */
+.midbox{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.box{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.box2{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.marginLR{
+    margin-left: 5px;
+    margin-right : 5px;
+    float : none;
+}
+
+
+@media (max-width: 767px){
+
+    .border{
+        flex-direction: column;
+    }
+    
+    .midbox{
+        width: 90%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        min-width: var(--min);
+    }
+
+    .box{
+        width: 90%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        min-width: var(--min);
+    }
+
+    #upnav{
+        min-width: var(--min);
+    }
+}
+
+@media (max-width: 368px){
+    .moveRight{
+        position: relative;
+        left: 40%;
+    }
+}

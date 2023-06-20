@@ -1,0 +1,105 @@
+/** Fichier css pour la page dataModifiers.js */
+
+/** contenant pour les cadres .BoxBorder (voir ci-dessous) afin que ceux-ci soient affichés en colonne*/
+.NameDateBorder{
+    width: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 0px;
+    align-items: center;
+}
+
+/** image de l'animal/employé chargé grâce à la base de données */
+.dbpicture{
+    max-width: 400px;
+    margin: 10px;
+}
+
+/** sélection de la date pour afficher l'horaire */
+.tableHeader{
+    margin: 10px;
+}
+
+.BoxBorder{
+    width: 80%;
+}
+
+/** Contenant pour la table en entier */
+.tableContent{
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/** Modifications des bordures des cellules de la table */
+table, th, td{
+    border: solid 2px black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th{
+    height: 75px;
+}
+
+td{
+    width: 180px;
+    height: 50px;
+}
+
+/** Style du bouton de soumission */
+.submitButton{
+    margin: 10px;
+    width: 125px;
+    height: 34px;
+    border-radius: 30px;
+}
+
+/** Cadre contenant le pop-up */
+.popup{
+    position: fixed;
+    width: 50%;
+    left: 25%;
+    top: calc(15% + 72px);
+    display: none;
+    z-index: 1;
+    margin: 0px;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/** 2 boutons se trouvant au dessous du pop-up */
+.foot{
+    align-self: center;
+}
+
+/** Un des éléments repris dans le pop-up (chaque input) */
+.popupElement{
+    margin-top: 20px;
+}
+
+/** input de description */
+#desc, input[type="text"]{
+    width: 80%;
+}
+
+textarea{
+    resize : none;
+}
+
+@media (max-width: 767px){
+
+    .Maincontent{
+        width: 90%;
+    }
+
+    .popup{
+        width: 70%;
+        left: 15%;
+    }
+}

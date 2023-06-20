@@ -1,0 +1,9 @@
+{
+    "name" : "__originalAdmin__",
+    "password" : "$2a$08$zBZMCkEh.QrIIoCv/7VPE.VI0xfZe93ZL/W/DL42RwNAEJGFx8fwy", 
+    "description" : "",
+    "admin" : true,
+    "startHour" : "00:00",
+    "endHour" : "00:00",
+    "picture" : ""
+}

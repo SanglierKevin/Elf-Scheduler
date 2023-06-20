@@ -1,0 +1,103 @@
+/** Fichier css pour les classes reprises par (quasi-)toutes les pages */
+
+.flex-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/** Cadre principal de la page (translucide) */
+.Maincontent{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+    padding: 10px;
+    min-height: 665px;
+    min-width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#upnav{
+    min-width: 500px;
+}
+
+table, th, td{
+    border: solid 2px black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/** Grands cadres arrondis */
+.BoxBorder{
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    justify-content: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/** Boutons utilisés sous des formulaires */
+.buttonModif{
+    cursor: pointer;
+    margin-top: auto;
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 4px;
+    text-align: center;
+}
+
+/** Barres pour sélectionner les heures */
+input[type="range"]{
+    width: 90%;
+    -webkit-appearance: none !important;
+    height: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/** Curseur sur les barres */
+input[type='range']::-webkit-slider-thumb{
+    -webkit-appearance: none !important;
+    height: 15px;
+    width: 15px;
+}
+
+/** Images de fond utilisées sur toutes les pages */
+.Border{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/** Style des placeholder dans la upnav */
+::placeholder { 
+    color: rgb(220, 220, 220);
+    opacity: 1; 
+}
+
+:-ms-input-placeholder { 
+    color: rgb(220, 220, 220);
+}
+
+::-ms-input-placeholder { 
+    color: rgb(220, 220, 220);
+}
+
+a{
+    text-decoration: none;
+}
+
+.dropdown-menu{
+    min-width : 225px;
+}

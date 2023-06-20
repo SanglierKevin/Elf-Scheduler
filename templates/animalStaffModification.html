@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+    <link rel = "stylesheet" href = "style/{{Mode}}Version.css">
+    <link rel = "stylesheet" href = "style/general.css">
+    <link rel = "stylesheet" href = "style/Modification.css">
+    
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/renderTime.js"></script>
+    <script type="text/javascript" src="/scripts/log.js"></script>
+    <script type="text/javascript" src="/scripts/modifiersFrontEnd.js"></script>
+
+    <title>Modification de l'attribution des {{title}} </title>   <!-- animaux / employés -->
+
+</head>
+<body onload="loadUpnav(), displayTable(), loadDescription(), loadTime(), loadImage(), loadPopup(), loadError(), hideIfNotAdmin()">
+    <div id="upnav"></div>
+
+    <form class="flex-box popup" id="popup" action="/modif/updateItem" method="POST" enctype="multipart/form-data">
+        <h2>Modifications</h2>
+
+        <label for="desc" class="popupElement">Description</label>
+        <textarea id="desc" name="desc" rows="1" cols="60"></textarea>
+ 
+        <label for="pictureUpload"  class="popupElement">Photo</label>
+        <input type="file" id="pictureUpload" name="pictureUpload" accept="image/*">
+        
+        <label for="rangeStart" class="popupElement" id="hideLabel" style="display:none">Horaire</label>
+        <input type = "range" name="rangeStart" id="rangeStart"  min="0" max="23.5" step="0.5" oninput="modifiyHour('Start')" style="display: none;">
+        <input type = "range" name="rangeEnd" id="rangeEnd" class="popupElement" min="0" max="23.5" step="0.5" oninput="modifiyHour('End')" style="display: none;">
+        <div class = "popupElement" id="rangeResult" style="display:none">
+            Travaillant de <span id="Start"></span> à <span id="End"></span>
+        </div>
+
+        <label for="adminCheck"  class="popupElement" id="checkLabel"  style="display:none">Admin <input type="checkbox" id="adminCheck" name="adminCheck" style="margin-left: 10px;" {{CheckIfisAdmin}}></label>
+        
+ 
+        <input type="hidden" id = "name" name = "name" value= {{Name}}>   <!-- informations nécessaires pour charger la table -->
+        <input type="hidden" id = "isAnimal" name="isAnimal" value= {{isAnimal}}>
+
+        <div class="foot popupElement">
+            <a onclick="closePopup()" href="#" class = "buttonModif">Quitter</a>
+            <input type="submit" class = "buttonModif" id="submitButton">
+        </div>
+    </form>
+
+    <div class="Maincontent" id="Maincontent">
+
+
+
+        <div class = "NameDateBorder flex-box">
+            <div class = "BoxBorder flex-box" > {{StaffAnimalName}}</div>
+            <div class="BoxBorder flex-box" id="description"></div>
+            <img id="picture" class="dbpicture">
+            <div class = "BoxBorder flex-box" id="clockDisplay"></div>
+            <a onclick="changeAnimalStaff()" id="descModifier" class = "buttonModif">Modifier les caractéristiques</a>
+        </div>
+
+        <div class = "tableHeader">
+            <form onchange="displayTable()"> <!-- Here -->
+                <select name="dateSelection" id="dateSelection" >
+                    {{#dateSelection}}
+                    <option value={{exactDate}}>{{dateText}}</option>   <!-- prend la date côté serveur -->
+                    {{/dateSelection}}
+                </select>
+            </form>
+        </div>
+        <form id = "table" class = "tableContent flex-box" method="POST" action="/modif/modifyTimeTable" onsubmit="return checkValidInput()"></form>
+    </div>
+
+        <input type = "hidden" id="isAdmin" value="{{isAdmin}}">   <!-- utilisé pour connaitre l'état du client -->
+        <img  class="Border" style="background-image : url(/images/{{imageMode}})">  <!-- background-image se comporte mieux pour la redimension de la fenêtre
+                                                                                      que src-->
+        <input type="hidden" value="{{error}}" id="error">
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Navbar Template · Bootstrap v5.1</title>
+
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>  <!-- lien boxicons -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbars/">
+    <link rel="stylesheet" href="/style/bootstrapAddition.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(() => {
+        document.getElementById("offcanvasNavbarDropdown").innerHTML =  document.getElementById("userIcon").value
+      });
+    </script>
+
+  </head>
+  <body>
+    
+<main>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="background-image: url('images/texture-tropical-wood-14182517.jpg');background-size:200px 200px">
+    <div class="container-fluid">
+      <div>
+        <a class="navbar-brand" href="/"><a href="/clearsession" style="color:white; font-size: 25px; padding:6px">Paradisio Scheduler</a></a>
+        <a href = "/ChangeMode" style= "position: relative; top:2.5px" id="changeModeTest">
+          <i class='bx bx-power-off bx-sm' style='color:#ffffff'  ></i>
+        </a>
+      </div>
+
+
+      <button class="navbar-toggler moveRight" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+          </li>
+        </ul>
+          <form action="/search" method="GET">
+            <input class="form-control" type="search" name="search" id="search" placeholder="Recherche..." aria-label="Search">
+          </form>
+          <li class="nav-item dropdown" style="display: flex;justify-content:center">
+            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            </a>
+            <input type="hidden" value="{{userIcon}}" id="userIcon">
+            <div class="dropdown-menu dropdown-menu-end">
+              <a class="dropdown-item" href={{ConnectionLink}}>{{Connected}}</a>
+              <a class="dropdown-item" href="{{HoraireLink}}" style="{{horairedisplay}}">Voir votre horaire</a>
+              <a class="dropdown-item" href="/log/inscription" style={{display}}>Ajouter un employé/animal</a>
+              <a class="dropdown-item" href="/log/deconnection.html" style={{displaydeco}}>Se déconnecter</a>
+            </div>
+          </li>
+      </div>
+    </div>
+  </nav>
+  <script src="scripts/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>

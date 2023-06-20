@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+    <link rel = "stylesheet" href = "style/general.css">
+    <link rel = "stylesheet" href = "style/schedule.css">
+    <link rel = "stylesheet" href = "style/{{Mode}}Version.css" id="modeCssTest">
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/renderTime.js"></script>
+    <script type="text/javascript" src="/scripts/modifiersFrontEnd.js"></script>
+    <script type="text/javascript" src="/scripts/log.js"></script>
+    
+    
+    <title>Affichage des animaux et employés</title>
+
+</head>
+<body onload="loadUpnav(),loadTime(), loadError(), rotate()">
+    <div id="upnav"></div>
+    <div class="Maincontent">
+
+        <div class = "NameDateBorder flex-box">
+            <div class = "BoxBorder flex-box" > Horaire des tâches à faire {{animaux}}</div>
+            <div class = "BoxBorder flex-box" id="clockDisplay"></div>
+
+                <input type="hidden" id="cat" value={{cat}}>
+                <input type="hidden" id="sort" value={{sort}}>
+                <select onchange="loadTableAnimalEmployee()" id="tableSelection">
+                    {{#options}}
+                    <option value="{{value}}">{{title}}</option>
+                    {{/options}}
+                </select>
+                <table class="scheduleTable">
+                    <tr>
+                        <th style="text-align: center; width : 20%">-</th>
+                        <th style="text-align: center; width : 40%"> Nom <a onclick="changeSort('name')" id="sortNameTest"><img src="/images/right-arrow-solid-{{imageMode}}.png" id="name" style="width : 15px"></a></th>
+                        <th style="text-align: center; width: 40%"> Incomplet le <a onclick="changeSort('isAvailable')"><img src="/images/right-arrow-solid-{{imageMode}}.png" id="isAvailable" style="width : 15px"></a></th>
+                    </tr>
+                    {{#list}}
+                    <tr class="ElementForTest"> 
+                        <td style="text-align: center; min-width : 40px"><i class="{{status1}}" style="{{status2}}"></i></td>
+                        <td style="text-align: center; min-width : 200px"><a href="{{nameLink}}" id="LinkForTest">{{name}}</td>
+                        <td style="text-align: center; min-width : 180px">{{date}}</td>
+                    </tr>
+                    {{/list}}
+                </table>
+                <div class="numlist">
+                    <a href="/schedule/decreaseNum"><img src="/images/left-arrow-{{imageMode}}.png" style="width : 20px"></a>
+                    {{#numlist}}
+                    <a href={{ref}} class={{main}}>{{number}}</a>
+                    {{/numlist}}
+                    <a href="/schedule/increaseNum"><img src="/images/right-arrow-{{imageMode}}.png" style="width : 20px"></a>
+                </div>
+
+    <input type="hidden" id="error" value="{{error}}">
+    <img  class="Border" style="background-image : url(/images/{{imageMode}}.jpg)">
+</body>
+        
+</html>

@@ -1,0 +1,32 @@
+{
+    "animalName" : "test",
+    "staffName" : "Georges",
+    "time" : "16:30",
+    "day" : "Mardi",
+    "date" : "16/11/2021",
+    "task" : "Soins"
+}
+{
+    "animalName" : "test",
+    "staffName" : "Julien",
+    "time" : "12:30",
+    "day" : "Lundi",
+    "date" : "15/11/2021",
+    "task" : "Nettoyer l'enclos"
+}
+{
+    "animalName" : "test",
+    "staffName" : "null",
+    "time" : "16:30",
+    "day" : "Dimanche",
+    "date" : "14/11/2021",
+    "task" : "Spectacle"
+}
+{
+    "animalName" : "test",
+    "staffName" : "Jhon",
+    "time" : "16:30",
+    "day" : "Dimanche",
+    "date" : "01/02/2012",
+    "task" : "Nourrir"
+}

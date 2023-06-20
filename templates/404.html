@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erreur 404</title>
+    <link href='style/{{mode}}Version.css' rel="stylesheet" id="version">
+    <link href="style/404.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/404.js"></script>
+</head>
+<body onload="loadPage()">
+    <div class='Maincontent'>
+        <h1> La page que vous recherchez n'existe pas ! </h1>
+        <div class="pointWrapper">
+            <div class="point" id="point1"></div>
+            <div class="point" id="point2"></div>
+            <div class="point" id="point3"></div>
+        </div>
+        <p>Vous pouvez faire une recherche d'un autre page ici !</p>
+        <form action="/search" method="GET" id="form">
+            <input type="search" placeholder="Recherche..." name="search" id="search">
+        </form>
+        <p>Ou bien vous rendre sur la <a href="/">page principale</a></p>
+    </div>
+</body>
+</html>

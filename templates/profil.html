@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="../style/log.css">
+    <link rel="stylesheet" href="style/{{Mode}}Version.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/scripts/log.js" type="text/javascript"></script>
+
+    <title>Profil</title>
+
+
+
+</head>
+<body onload="loadUpnav(), loadError(), loadHour()">
+    <div id="upnav"></div>
+<div class="flex-box">
+<input type="hidden" value="{{error}}" id="error">
+
+
+
+<!-- Cadre avec informations de profil -->
+<cadre class="box">
+    <div class="BoxBorder flex-box"><h1>Informations de profil</div>
+
+    <label for="nameEmployee"><b>Nom_Prénom</b><span>{{name}}</span></label>
+
+    <!-- Formulaire pour changer la description -->
+    <form action="modifDescription.html" method="post" class="box2">
+    <label for="descriptionEmployee"><b>Description</b></label>
+    <input type="text" id="descriptionEmployee" name="descriptionEmployee" value="{{description}}" placeholder="Tapez votre description ici" required>
+    <button type="submit" class = "buttonModif" id="descModifTest">Enregistrer</button>
+    </form>
+
+    <!-- Formulaire pour changer le mot de passe -->
+    <form action="modifPassword.html" method="post" class="box2">
+    <label for="password"><b>Mot de passe </b><input type="checkbox" onclick="AfficherMDP()"><sup>Voir</sup></label>
+    <input type="password" id="connmdp" name="connmdp" placeholder="Tapez votre nouveau mot de passe ici" onkeypress="return event.charCode!=32" required> <!-- Empêche d'entrer des espaces -->
+    <button type="submit" class = "buttonModif" id="mdpModifTest">Enregistrer</button>
+    </form>
+
+    <!-- Formulaire pour changer la photo de profil -->
+    <form action="modifPicture.html" method="post" class="box2" enctype="multipart/form-data">
+    <label for="picture"><b>Photo de profil</b><br><center><img src="{{picture}}" style="max-width: 80%; max-height: 400px;"></center></label>
+    <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" required>
+    <button type="submit" class="buttonModif">Enregistrer</button>
+    </form>
+
+    <label for="admin"><b>Administrateur ?</b><span>{{admin}}</span></label>
+    <label for="startHour"><b>Heure de début</b><span>{{startHour}}</span></label>
+    <label for="endHour"><b>Heure de fin</b><span>{{endHour}}</span></label>
+</cadre>
+</div>
+
+<img class="Border" style="background-image:url(/images/{{imageMode}})">
+
+</body>
+</html>

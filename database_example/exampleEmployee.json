@@ -1,0 +1,30 @@
+{
+    "name" : "Georges_Tel",
+    "password" : "$2a$08$R27f0iKs4H2ziBqPC9BMD.vKZq5sTinaG/OMm56zWN/3tgjJXqZ9e", 
+    "description" : "En vacances",
+    "admin" : true,
+    "startHour" : "00:00",
+    "endHour" : "12:00",
+    "picture" : ""
+}
+
+{
+    "name" : "Julien_doré",
+    "password" : "test2",
+    "description" : "En vacances 2",
+    "admin" : false,
+    "startHour" : "12:00",
+    "endHour" : "20:00",
+    "picture" : ""
+}
+
+
+{
+    "name" : "Jean_Castex",
+    "password" : "test",
+    "description" : "En vacances",
+    "admin" : true,
+    "startHour" : "21:00",
+    "endHour" : "05:00",
+    "picture" : ""
+}
